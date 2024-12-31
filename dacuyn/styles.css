@@ -1,0 +1,147 @@
+/* Cấu trúc chung */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng cho logo */
+}
+
+header .logo:hover {
+    transform: scale(1.1); /* Phóng to logo khi hover */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;  /* Thêm padding để tạo khoảng cách */
+    border-radius: 4px;   /* Thêm border-radius để tạo liên kết tròn trịa */
+    transition: 
+        background-color 0.3s ease-in-out,  /* Mượt mà khi đổi màu nền */
+        color 0.3s ease-in-out;              /* Mượt mà khi thay đổi màu chữ */
+}
+
+header nav ul li a:hover {
+    background-color: #ff6347; /* Màu nền khi hover vào liên kết */
+    color: #fff;               /* Đổi màu chữ khi hover */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* Mượt mà khi đổi màu */
+}
+
+#home h1:hover {
+    color: #ff6347; /* Đổi màu tiêu đề khi hover */
+}
+
+.intro, .outro {
+    font-size: 18px;
+    color: #555;
+    opacity: 0;
+    animation: fadeIn 3s ease-out 1s forwards;
+}
+
+#home img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ cho hình ảnh */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out; /* Mượt mà khi đổi màu */
+}
+
+footer a:hover {
+    color: #ff6347; /* Đổi màu liên kết trong footer */
+}
+
+/* CSS Animation: Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #home h1 {
+        font-size: 28px; /* Giảm kích thước tiêu đề trên màn hình nhỏ */
+    }
+
+    .intro, .outro {
+        font-size: 16px; /* Giảm kích thước văn bản */
+    }
+
+    #home img {
+        max-width: 100%; /* Đảm bảo hình ảnh có thể thu nhỏ trên màn hình nhỏ */
+    }
+}
